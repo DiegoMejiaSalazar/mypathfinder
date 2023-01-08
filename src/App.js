@@ -1,11 +1,12 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
 import {
   BrowserRouter as Router,
   Routes,
   Route,
-  Link
-} from 'react-router-dom';
+  Link,
+  useRouteMatch,
+  useParams
+} from "react-router-dom";
 
 import RootPage from './containers/root';
 
@@ -13,7 +14,7 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path='/home' component={RootPage} />
+        <Route exact path='/home' element={<RootPage/>} />
       </Routes>
     </Router>
 
